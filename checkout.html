@@ -46,6 +46,13 @@
         <h1>Checkout</h1>
         <form id="checkoutForm" role="form" aria-label="Checkout form">
           <div class="form-group">
+            <label for="deliveryMethod">Delivery Method:</label>
+            <select id="deliveryMethod" name="deliveryMethod" aria-label="Choose delivery method">
+              <option value="pickup">Pick up at store</option>
+              <option value="delivery">Home delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="name">Name:</label>
             <input
               type="text"
@@ -62,8 +69,7 @@
               type="text"
               id="address"
               name="address"
-              required
-              aria-required="true"
+              aria-required="false"
               aria-label="Enter your delivery address"
             />
           </div>
@@ -88,6 +94,21 @@
     <script src="shop.js"></script>
     <script>
       renderBasket();
+      const deliveryMethod = document.getElementById("deliveryMethod");
+      const addressInput = document.getElementById("address");
+      function updateAddressRequirement() {
+        const isDelivery = deliveryMethod.value === "delivery";
+        if (isDelivery) {
+          addressInput.setAttribute("required", "true");
+          addressInput.setAttribute("aria-required", "true");
+        } else {
+          addressInput.removeAttribute("required");
+          addressInput.setAttribute("aria-required", "false");
+        }
+      }
+      deliveryMethod.addEventListener("change", updateAddressRequirement);
+      updateAddressRequirement();
+
       document.getElementById("checkoutForm").onsubmit = function (e) {
         e.preventDefault();
         document.getElementById("successMsg").style.display = "block";
