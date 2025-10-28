@@ -2,6 +2,7 @@ const PRODUCTS = {
   apple: { name: "Apple", emoji: "🍏" },
   banana: { name: "Banana", emoji: "🍌" },
   lemon: { name: "Lemon", emoji: "🍋" },
+  basket_s: { name: "Fruitbasket S", emoji: "🧺" },
   basket_m: { name: "Fruitbasket M", emoji: "🧺" },
   basket_l: { name: "Fruitbasket L", emoji: "🧺" },
   basket_xl: { name: "Fruitbasket XL", emoji: "🧺" },
