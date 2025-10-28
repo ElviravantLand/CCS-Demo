@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruitbaskets - Fruit Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <div class="header-center">
+        <a href="index.html" class="logo" aria-label="Go to homepage">
+          <img
+            src="img/fruit-shop-logo.webp"
+            class="logo-img"
+            alt="Fruit Shop Logo"
+          />
+          <span class="products-text" style="text-align: center">
+            View Products
+          </span>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bundles.html">Bundles</a>
+            <a href="personality-quiz.html" class="quiz-link">🌟 Fruit Quiz</a>
+          </div>
+          <a
+            href="basket.html"
+            class="basket-link"
+            aria-label="View shopping basket"
+            style="position: relative"
+          >
+            <img
+              src="img/basket-icon.png"
+              class="basket-img"
+              alt="Shopping basket icon"
+            />
+            <span class="basket-text">View shopping basket</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <h1 class="products-title">Fruitbaskets</h1>
+      <div class="bundles-container">
+        <div class="bundle-card">
+          <h2>Fruitbasket S</h2>
+          <div class="bundle-emojis">
+            <span role="img" aria-label="Basket">🧺</span>
+          </div>
+          <p class="bundle-desc">Small basket, perfect for individuals or as a gift.</p>
+          <button
+            onclick="addToBasket('basket_s')"
+            class="cart-action-btn"
+            aria-label="Add Fruitbasket S to basket"
+          >
+            Add to Basket
+          </button>
+        </div>
+
+        <div class="bundle-card">
+          <h2>Fruitbasket M</h2>
+          <div class="bundle-emojis">
+            <span role="img" aria-label="Basket">🧺</span>
+          </div>
+          <p class="bundle-desc">Medium-sized basket, perfect for couples or small families.</p>
+          <button
+            onclick="addToBasket('basket_m')"
+            class="cart-action-btn"
+            aria-label="Add Fruitbasket M to basket"
+          >
+            Add to Basket
+          </button>
+        </div>
+
+        <div class="bundle-card">
+          <h2>Fruitbasket L</h2>
+          <div class="bundle-emojis">
+            <span role="img" aria-label="Basket">🧺</span>
+          </div>
+          <p class="bundle-desc">Large basket, great for families and gatherings.</p>
+          <button
+            onclick="addToBasket('basket_l')"
+            class="cart-action-btn"
+            aria-label="Add Fruitbasket L to basket"
+          >
+            Add to Basket
+          </button>
+        </div>
+
+        <div class="bundle-card">
+          <h2>Fruitbasket XL</h2>
+          <div class="bundle-emojis">
+            <span role="img" aria-label="Basket">🧺</span>
+          </div>
+          <p class="bundle-desc">Extra-large basket, ideal for parties and events.</p>
+          <button
+            onclick="addToBasket('basket_xl')"
+            class="cart-action-btn"
+            aria-label="Add Fruitbasket XL to basket"
+          >
+            Add to Basket
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="shop.js"></script>
+  </body>
+  </html>
+
+
